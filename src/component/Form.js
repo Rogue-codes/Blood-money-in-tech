@@ -2,6 +2,11 @@ import  { useState } from 'react'
 import styled from 'styled-components'
 
 const Form = () => {
+    const [modal,setModal] = useState(false)
+
+    const toggleModal = () => {
+        setModal(!modal)
+    }
         const [values,setValues] = useState({
         name:"",
         email:"",
@@ -57,9 +62,19 @@ const Form = () => {
                 <label htmlFor="" className='Label'>Phone Number</label>
                 <input type="text" name='phoneNumber' className='name' required value={phoneNumber} onChange={handleChange}/>
 
-                <button type='submit'>Submit</button>
+                <button type='submit' onClick={toggleModal}>Submit</button>
 
                 </form>
+
+                {
+                    modal && (
+                        <div className="modal">
+                                <p>
+                                    Your details has been recieved you will get an email from us
+                                </p>
+                        </div>
+                    )
+                }
                 
             </div>
             
@@ -231,7 +246,9 @@ const StyledForm = styled.div`
         }
 
         @media screen and (min-width: 1024px) {
-            width:90%;
+            padding-left:5%;
+            font-size:18px;
+            width:85%;
             margin-left:4%;
             border:none;
             border-radius:5px;
@@ -305,6 +322,13 @@ const StyledForm = styled.div`
             line-height: 106%;
         }
 
+    }
+
+    .modal{
+        color:white;
+        text-align:center;
+        font-size:16px;
+        font-family: 'Montserrat', sans-serif;
     }
 }
 `
