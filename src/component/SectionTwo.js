@@ -38,7 +38,7 @@ const SectionTwo = () => {
 
                     <div className="list">
                         <ul>
-                            <li><span id='color'>A free 15 mins consultation call with the author Olabanji Ewenla regarding anything you'd like to find out about the tech industry</span></li><br /><br />
+                            <li className='banj' ><span id='color'>A free 15 mins consultation call with the author Olabanji Ewenla regarding anything you'd like to find out about the tech industry</span></li><br /><br />
                             <li><span id='color'>20% discount off the tuition fee for UIUX design training at Perxels Design School</span></li>
                             <li><span id='color'>20% discount off the tuition fee for Product Management training at Enoverlab</span></li>
                             <li><span id='color'>Direct link to an in-depth course on how to make money online as a freelancer</span></li>
@@ -249,6 +249,11 @@ max-width:100%;
         }
 
         ul{
+            .banj{
+                @media screen and (min-width: 1024px) {
+                    margin-bottom:-5%;
+                }
+            }
             @media screen and (max-width: 320px) {
                 max-width:80%;
                 margin:auto;
@@ -300,6 +305,7 @@ max-width:100%;
                 @media screen and (min-width: 1024px) {
                     margin-left:0%;
                     font-size: 18px;
+                    padding-top:5%;
                 }
             }
         }
