@@ -532,14 +532,14 @@ max-width:100%;
             }
 
             @media screen and (min-width:1024px) {
-                max-width:20%;
-                margin-left:30%;
+                width:300px;
+                height:300px;
                 margin-top:-10%;
+                margin-left:25%;
                 postion:absolute;
-                display:none;
 
                 img{
-                    width:100%;
+                    width:130%;
                     height:100%;
                 }
             }
